@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "393023839835",
+    "project_id": "nauci-me-faee4",
+    "storage_bucket": "nauci-me-faee4.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:393023839835:android:7637f37c2f71afd4a5297e",
+        "android_client_info": {
+          "package_name": "com.example.naucime"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "393023839835-e6sis04qb7138caod7saj1vfcrbu2pqd.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAEGTYF0Svp99ma4uGQd5_L8PZEti2Pvtw"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "393023839835-e6sis04qb7138caod7saj1vfcrbu2pqd.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
