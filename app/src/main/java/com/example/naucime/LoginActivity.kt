@@ -56,7 +56,7 @@ class LoginActivity : AppCompatActivity() {
                         startActivity(intent)
 
             } else {
-                Toast.makeText(this,"Authentitacion error " + task.exception, Toast.LENGTH_LONG).show()
+                Toast.makeText(this,"Authentication error " + task.exception, Toast.LENGTH_LONG).show()
 
             }
             }
