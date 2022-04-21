@@ -1,10 +1,8 @@
 package com.example.naucime
 
 import android.content.Intent
-import android.media.Image
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
-import android.widget.ImageView
 import androidx.cardview.widget.CardView
 
 class MainActivity : AppCompatActivity() {
@@ -13,6 +11,7 @@ class MainActivity : AppCompatActivity() {
         setContentView(R.layout.activity_main)
 
         val imgProfesor: CardView = findViewById(R.id.imgProfesor)
+
 
         imgProfesor.setOnClickListener {
             val intent = Intent(this, LoginActivity::class.java)
