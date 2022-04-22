@@ -4,15 +4,23 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="@drawable/back2"
     tools:context=".ProfesorDashboardActivity">
 
 
     <Button
         android:id="@+id/btNewLesson"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
+        android:layout_width="271dp"
+        android:layout_height="57dp"
         android:layout_margin="40dp"
+        android:layout_marginBottom="48dp"
+        android:backgroundTint="#ffff"
         android:text="Novi čas"
-        app:layout_constraintBottom_toBottomOf="parent" />
+        android:textColor="#A790B3"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        android:fontFamily="@font/advent_pro_semibold"/>
 
 </androidx.constraintlayout.widget.ConstraintLayout>

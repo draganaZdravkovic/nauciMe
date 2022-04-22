@@ -1,26 +1,51 @@
 package com.example.naucime
 
+import android.animation.ObjectAnimator
+import android.animation.PropertyValuesHolder
 import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
-import androidx.cardview.widget.CardView
+import android.widget.ImageView
 
 class MainActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
 
-        val imgProfesor: CardView = findViewById(R.id.imgProfesor)
+        val imgProfesor: ImageView = findViewById(R.id.imgProfesor)
 
+//        animate pulse action
+        val scaleDownProfessor:ObjectAnimator = ObjectAnimator.ofPropertyValuesHolder(
+            imgProfesor,
+            PropertyValuesHolder.ofFloat("scaleX", 1.05f),
+            PropertyValuesHolder.ofFloat("scaleY", 1.05f));
+        scaleDownProfessor.duration = 310;
 
+        scaleDownProfessor.repeatCount = ObjectAnimator.INFINITE;
+        scaleDownProfessor.repeatMode = ObjectAnimator.REVERSE;
+
+        scaleDownProfessor.start();
+//
         imgProfesor.setOnClickListener {
             val intent = Intent(this, LoginActivity::class.java)
             intent.putExtra("userType", "profesor")
             startActivity(intent)
         }
 
-        val imgStudent:CardView = findViewById(R.id.imgStudent)
+        val imgStudent:ImageView = findViewById(R.id.imgStudent)
 
+//        animate pulse action
+        val scaleDownStudent:ObjectAnimator = ObjectAnimator.ofPropertyValuesHolder(
+            imgStudent,
+            PropertyValuesHolder.ofFloat("scaleX", 1.05f),
+            PropertyValuesHolder.ofFloat("scaleY", 1.05f));
+        scaleDownStudent.duration = 310;
+
+        scaleDownStudent.repeatCount = ObjectAnimator.INFINITE;
+        scaleDownStudent.repeatMode = ObjectAnimator.REVERSE;
+
+        scaleDownStudent.start();
+//
         imgStudent.setOnClickListener {
             val intent = Intent(this, LoginActivity::class.java)
             intent.putExtra("userType", "student")
@@ -29,3 +54,4 @@ class MainActivity : AppCompatActivity() {
 
     }
 }
+

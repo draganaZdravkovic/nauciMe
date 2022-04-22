@@ -4,31 +4,107 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".RegisterActivity">
+    tools:context=".RegisterActivity"
+    android:background="@drawable/grid">
 
     <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent">
 
+
+
     <TextView
         android:layout_width="wrap_content"
         android:text="Register"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintBottom_toTopOf="@id/textEmail"
+        app:layout_constraintBottom_toTopOf="@id/textName"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        android:textSize="25dp"
+        android:textSize="30dp"
         android:textColor="@color/black"
         android:textStyle="bold"
         android:layout_height="wrap_content"
+        android:fontFamily="@font/advent_pro_semibold"
         />
 
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/textName"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="40dp"
+            android:layout_marginEnd="40dp"
+            android:paddingTop="10dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0.309">
+
+            <EditText
+                android:id="@+id/editName"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/advent_pro_semibold"
+                android:hint="Name"
+                android:textColorHighlight="#A790B3"
+                android:textColorLink="#D0B2DF" />
+
+
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/textSurname"
+            android:layout_width="match_parent"
+            app:layout_constraintTop_toBottomOf="@+id/textName"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            android:layout_marginStart="40dp"
+            android:layout_marginEnd="40dp"
+            android:paddingTop="10dp"
+            android:layout_height="wrap_content">
+
+            <EditText
+                android:id="@+id/editSurname"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="Surname"
+                android:fontFamily="@font/advent_pro_semibold"
+                android:textColorHighlight="#A790B3"
+                android:textColorLink="#D0B2DF"
+                />
+
+
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/textContact"
+            android:layout_width="match_parent"
+            app:layout_constraintTop_toBottomOf="@+id/textSurname"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            android:layout_marginStart="40dp"
+            android:layout_marginEnd="40dp"
+            android:paddingTop="10dp"
+            android:layout_height="wrap_content">
+
+            <EditText
+                android:id="@+id/editContact"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="Phone number"
+                android:fontFamily="@font/advent_pro_semibold"
+                android:textColorHighlight="#A790B3"
+                android:textColorLink="#D0B2DF"
+                />
+
+
+        </com.google.android.material.textfield.TextInputLayout>
 
     <com.google.android.material.textfield.TextInputLayout
         android:id="@+id/textEmail"
         android:layout_width="match_parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textContact"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         android:layout_marginStart="40dp"
@@ -41,6 +117,9 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:hint="Email"
+            android:fontFamily="@font/advent_pro_semibold"
+            android:textColorHighlight="#A790B3"
+            android:textColorLink="#D0B2DF"
             />
 
 
@@ -63,6 +142,9 @@
             android:layout_height="wrap_content"
             android:hint="Password"
             android:inputType="textPassword"
+            android:fontFamily="@font/advent_pro_semibold"
+            android:textColorHighlight="#A790B3"
+            android:textColorLink="#D0B2DF"
             />
     </com.google.android.material.textfield.TextInputLayout>
 
@@ -83,18 +165,24 @@
             android:layout_height="wrap_content"
             android:hint="Confirm Password"
             android:inputType="textPassword"
+            android:fontFamily="@font/advent_pro_semibold"
+            android:textColorHighlight="#A790B3"
+            android:textColorLink="#D0B2DF"
             />
     </com.google.android.material.textfield.TextInputLayout>
 
-    <Button
-        android:id="@+id/btnRegister"
-        android:layout_width="match_parent"
-        android:text="Register"
-        app:layout_constraintTop_toBottomOf="@id/textCPassword"
-        android:layout_margin="40dp"
-        android:textColor="#ffff"
-        android:backgroundTint="@color/teal_700"
-        android:layout_height="wrap_content"/>
+        <Button
+            android:id="@+id/btnRegister"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="40dp"
+            android:backgroundTint="#A790B3"
+            android:text="Register"
+            android:textColor="#ffff"
+            app:layout_constraintTop_toBottomOf="@id/textCPassword"
+            tools:layout_editor_absoluteX="40dp"
+            android:fontFamily="@font/advent_pro_semibold"
+            />
 
     <TextView
         android:id="@+id/tvLogin"
@@ -109,6 +197,7 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintBottom_toBottomOf="parent"
+        android:fontFamily="@font/advent_pro_semibold"
         />
     </androidx.constraintlayout.widget.ConstraintLayout>
 </ScrollView>

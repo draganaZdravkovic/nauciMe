@@ -4,15 +4,18 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".LoginActivity">
+    tools:context=".LoginActivity"
+    android:background="@drawable/grid"
+    >
 
     <TextView
         android:id="@+id/textView"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:fontFamily="@font/advent_pro_semibold"
         android:text="Login"
-        android:textColor="@color/black"
-        android:textSize="25dp"
+        android:textColor="#000000"
+        android:textSize="30dp"
         android:textStyle="bold"
         app:layout_constraintBottom_toTopOf="@id/tiUsername"
         app:layout_constraintEnd_toEndOf="parent"
@@ -27,14 +30,20 @@
         android:layout_marginEnd="40dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent">
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.404">
 
         <EditText
             android:id="@+id/etUsername"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:hint="Username" />
+            android:fontFamily="@font/advent_pro_semibold"
+            android:hint="Username"
+            android:textColorHighlight="#A790B3"
+            android:textColorLink="#CBB0DA"
+            />
 
 
     </com.google.android.material.textfield.TextInputLayout>
@@ -55,29 +64,22 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:hint="Password"
+            android:fontFamily="@font/advent_pro_semibold"
             android:inputType="textPassword" />
 
 
     </com.google.android.material.textfield.TextInputLayout>
-
-    <!--    <Spinner-->
-    <!--        android:id="@+id/sUser"-->
-    <!--        android:layout_width="match_parent"-->
-    <!--        android:layout_height="wrap_content"-->
-    <!--        android:layout_margin="40dp"-->
-    <!--        app:layout_constraintEnd_toEndOf="parent"-->
-    <!--        app:layout_constraintStart_toStartOf="parent"-->
-    <!--        app:layout_constraintTop_toBottomOf="@id/tiPassword" />-->
 
     <Button
         android:id="@+id/btnLogin"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_margin="40dp"
-        android:backgroundTint="@color/teal_700"
+        android:backgroundTint="#A790B3"
         android:text="Login"
         android:textColor="#ffff"
-        app:layout_constraintTop_toBottomOf="@id/tiPassword" />
+        app:layout_constraintTop_toBottomOf="@id/tiPassword"
+        android:fontFamily="@font/advent_pro_semibold"/>
 
     <TextView
         android:id="@+id/tvRegister"
@@ -89,6 +91,7 @@
         android:textSize="16dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent" />
+        app:layout_constraintStart_toStartOf="parent"
+        android:fontFamily="@font/advent_pro_semibold"/>
 
 </androidx.constraintlayout.widget.ConstraintLayout>

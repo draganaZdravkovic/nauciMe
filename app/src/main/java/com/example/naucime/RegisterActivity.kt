@@ -1,3 +1,4 @@
+//"Designed by Vectorium / Freepik"
 package com.example.naucime
 
 import android.content.Intent
