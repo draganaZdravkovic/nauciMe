@@ -19,6 +19,7 @@ class RegisterActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_register)
 
+        // TODO: povezati preko id lokalno
         auth = FirebaseAuth.getInstance()
 
         val btnRegister:Button = findViewById(R.id.btnRegister)

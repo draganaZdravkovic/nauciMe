@@ -6,6 +6,12 @@ import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.widget.ImageView
+import com.example.naucime.db.DatabaseServiceProvider
+import com.example.naucime.model.Professor
+import com.example.naucime.model.Test
+import kotlinx.serialization.decodeFromString
+import kotlinx.serialization.encodeToString
+import kotlinx.serialization.json.Json
 
 class MainActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -52,6 +58,14 @@ class MainActivity : AppCompatActivity() {
             startActivity(intent)
         }
 
+
+
+
+        val newProfessor = Test("Pera", "Peric")
+
+//        println(Json.encodeToString(newProfessor))
+        val test = Json.decodeFromString<Test>("""{name: "pera", language: "Peric"}""")
+        println(test.name)
     }
 }
 
